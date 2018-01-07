@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7863ce97-2e37-450f-b382-1a896af99abe" name="Stephen@PRO3 2018-01-05 19:32:05" runUser="PRO3\Stephen" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="52b755dc-7329-48d6-840c-fca6e699ef86">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="Stephen_PRO3 2018-01-05 19_32_05" />
+    <Properties />
+  </TestSettings>
+  <Times creation="2018-01-05T19:32:05.4720992-05:00" queuing="2018-01-05T19:32:05.8689821-05:00" start="2018-01-05T19:32:06.0055096-05:00" finish="2018-01-05T19:32:06.4393111-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="writeTest" storage="kata_pentests\bin\debug\kata_pentests.dll" id="fbe33f98-b47d-6b1b-f23b-d2fb8504e037">
+      <Execution id="2774724b-3dc4-47fb-b661-007e7168133d" />
+      <TestMethod codeBase="C:/Users/Stephen/source/repos/kata_pen/kata_penTests/bin/debug/kata_penTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="kata_pen.Tests.PencilTests, kata_penTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="writeTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="fbe33f98-b47d-6b1b-f23b-d2fb8504e037" executionId="2774724b-3dc4-47fb-b661-007e7168133d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2774724b-3dc4-47fb-b661-007e7168133d" testId="fbe33f98-b47d-6b1b-f23b-d2fb8504e037" testName="writeTest" computerName="PRO3" duration="00:00:00.0126734" startTime="2018-01-05T19:32:06.0851610-05:00" endTime="2018-01-05T19:32:06.3859973-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2774724b-3dc4-47fb-b661-007e7168133d">
+    </UnitTestResult>
+  </Results>
+</TestRun>
