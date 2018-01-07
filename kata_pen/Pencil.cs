@@ -8,6 +8,9 @@ namespace kata_pen
 {
     public class Pencil
     {
+        // The sheet of paper we're writing on.
+        string sheet;
+
         /// <summary>
         /// Write on paper.
         /// </summary>
@@ -15,7 +18,9 @@ namespace kata_pen
         /// <returns></returns>
         public string write(string inputText)
         {
-            return inputText;
+            sheet += inputText;
+            return sheet;
         }
     }
 }
+
