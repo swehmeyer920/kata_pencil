@@ -8,10 +8,35 @@ namespace kata_pen
 {
     public class Pencil
     {
+        public int length = 0;
         // The sheet of paper we're writing on.
         string sheet;
-        public int durability = 4000;
 
+        private int _durability;
+        // durability of a sharpened point.
+        public int Durability
+        {
+            private get
+            {
+                return _durability;
+            }
+            set
+            {
+                _durability = value;
+                currentDurability = value;
+            }
+        }
+
+        private int currentDurability = 4000;
+
+        public void sharpen()
+        {
+            if (length > 0)
+            {
+                currentDurability = _durability;
+                --length;
+            }
+        }
         /// <summary>
         /// Write on paper.
         /// </summary>
@@ -28,9 +53,9 @@ namespace kata_pen
                 }
                 // Upper case characters are twice as degradating.
                 if (char.IsUpper(c))
-                    durability--;
-                durability--;
-                if (durability >= 0)
+                    currentDurability--;
+                currentDurability--;
+                if (currentDurability >= 0)
                     sheet += c;
             }
             return sheet;
