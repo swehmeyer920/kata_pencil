@@ -1,4 +1,4 @@
-Kata Pencil durability project.
+Kata Pencil durability project in C# using Visual Studio 2017 Community.
 
 You must have a Visual Studio command prompt open for the following to work.
 clean.bat - Cleans the release and debug projects.
