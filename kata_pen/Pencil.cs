@@ -106,8 +106,16 @@ namespace kata_pen
         {
             for (int i = 0; i < text.Length; ++i)
             {
+                char letter = sheet[index + i];
                 sheet = sheet.Remove(index + i, 1);
-                sheet = sheet.Insert(index + i, new string(text[i], 1));
+
+                // If we're on a space then take the text from the string, otherwise use @.
+                if (letter == ' ')
+                    letter = text[i];
+                else
+                    letter = '@';
+
+                sheet = sheet.Insert(index + i, new string(letter, 1));
             }
         }
 
