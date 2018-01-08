@@ -10,7 +10,12 @@ namespace kata_pen
     {
         public int length = 0;
         // The sheet of paper we're writing on.
-        private string sheet;
+        public string sheet
+        {
+            get;
+            private set;
+        }
+        //private string sheet;
 
         private int _leadDurability;
         // durability of a sharpened point.
@@ -89,12 +94,12 @@ namespace kata_pen
 
             return lastLocation;
         }
+
         /// <summary>
-        /// Write on paper.
+        /// Write on sheet.
         /// </summary>
         /// <param name="inputText"></param>
-        /// <returns></returns>
-        public string write(string inputText)
+        public void write(string inputText)
         {
             foreach (char c in inputText)
             {
@@ -110,7 +115,6 @@ namespace kata_pen
                 if (currentLeadDurability >= 0)
                     sheet += c;
             }
-            return sheet;
         }
     }
 }
