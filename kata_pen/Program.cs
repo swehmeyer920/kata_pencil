@@ -10,6 +10,7 @@ namespace kata_pen
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("This program is an excercise to complete the Pencil Durability Kata. Examine the Pencil and PencilTest classes.");
         }
     }
 }
