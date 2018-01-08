@@ -26,8 +26,11 @@ namespace kata_pen
                     sheet += c;
                     continue;
                 }
+                // Upper case characters are twice as degradating.
+                if (char.IsUpper(c))
+                    durability--;
                 durability--;
-                if (durability > 0)
+                if (durability >= 0)
                     sheet += c;
             }
             return sheet;
