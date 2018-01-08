@@ -15,7 +15,6 @@ namespace kata_pen
             get;
             private set;
         }
-        //private string sheet;
 
         private int _leadDurability;
         // durability of a sharpened point.
@@ -59,6 +58,9 @@ namespace kata_pen
             // Erase from right to left.
             for (int i = textToErase.Length - 1; i >= 0 ; --i)
             {
+                if (eraserDurability <= 0)
+                    return;
+                --eraserDurability;
                 sheet = sheet.Remove(lastIndex + i, 1);
                 sheet = sheet.Insert(lastIndex + i, " ");
             }
