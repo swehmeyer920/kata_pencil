@@ -98,6 +98,20 @@ namespace kata_pen
         }
 
         /// <summary>
+        /// Put text at index.
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="text"></param>
+        public void edit(int index, string text)
+        {
+            for (int i = 0; i < text.Length; ++i)
+            {
+                sheet = sheet.Remove(index + i, 1);
+                sheet = sheet.Insert(index + i, new string(text[i], 1));
+            }
+        }
+
+        /// <summary>
         /// Write on sheet.
         /// </summary>
         /// <param name="inputText"></param>
