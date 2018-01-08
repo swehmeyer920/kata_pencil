@@ -12,22 +12,24 @@ namespace kata_pen
         // The sheet of paper we're writing on.
         private string sheet;
 
-        private int _durability;
+        private int _leadDurability;
         // durability of a sharpened point.
-        public int Durability
+        public int LeadDurability
         {
             private get
             {
-                return _durability;
+                return _leadDurability;
             }
             set
             {
-                _durability = value;
-                currentDurability = value;
+                _leadDurability = value;
+                currentLeadDurability = value;
             }
         }
 
-        private int currentDurability = 4000;
+        private int currentLeadDurability = 4000;
+
+        public int eraserDurability = 4000;
 
         /// <summary>
         /// Sharpen the pencil point and decrease it's length.
@@ -36,7 +38,7 @@ namespace kata_pen
         {
             if (length > 0)
             {
-                currentDurability = _durability;
+                currentLeadDurability = _leadDurability;
                 --length;
             }
         }
@@ -49,9 +51,12 @@ namespace kata_pen
             int lastIndex = indexOfLast(textToErase);
             if (lastIndex == -1)
                 return;
-            sheet = sheet.Remove(lastIndex, textToErase.Length);
-            for (int i = 0; i < textToErase.Length; ++i)
-                sheet = sheet.Insert(lastIndex, " ");
+            // Erase from right to left.
+            for (int i = textToErase.Length - 1; i >= 0 ; --i)
+            {
+                sheet = sheet.Remove(lastIndex + i, 1);
+                sheet = sheet.Insert(lastIndex + i, " ");
+            }
         }
 
         /// <summary>
@@ -100,9 +105,9 @@ namespace kata_pen
                 }
                 // Upper case characters are twice as degradating.
                 if (char.IsUpper(c))
-                    currentDurability--;
-                currentDurability--;
-                if (currentDurability >= 0)
+                    currentLeadDurability--;
+                currentLeadDurability--;
+                if (currentLeadDurability >= 0)
                     sheet += c;
             }
             return sheet;
