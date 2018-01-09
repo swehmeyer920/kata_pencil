@@ -10,3 +10,7 @@ testD.bat - Runs the unit tests. Debug.
 Most interesting files:
 PencilTests\PencilTests.cs
 Pencil\Pencil.cs
+
+URLs:
+http://info.pillartechnology.com/kata
+https://github.com/PillarTechnology/kata-pencil-durability
